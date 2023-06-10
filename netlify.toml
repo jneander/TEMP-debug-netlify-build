@@ -1,0 +1,16 @@
+[build]
+  publish = "dist"
+
+[dev]
+  autoLaunch = false
+  command = "npm run build:watch"
+  publish = "dist"
+
+[functions]
+  directory = "dist"
+  external_node_modules = ["playwright-core"]
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
