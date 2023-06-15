@@ -1,13 +1,12 @@
 [build]
-  publish = "dist"
+  publish = "src"
 
 [dev]
   autoLaunch = false
-  command = "npm run build:watch"
-  publish = "dist"
+  publish = "src"
 
 [functions]
-  directory = "dist"
+  directory = "src"
   external_node_modules = ["playwright-core"]
 
 [[redirects]]
